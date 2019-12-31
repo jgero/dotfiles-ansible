@@ -9,8 +9,6 @@
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
 ;
-;   Modified By Aditya Shakya.
-;
 ;==========================================================
 
 [color]
@@ -87,7 +85,7 @@ scroll-down = i3wm-wsprev
 
 ;== Module Location ========================================================
 
-modules-left = workspaces term files browser
+modules-left = workspaces
 modules-center = message
 modules-right = network pkg volume cpu date time
  
@@ -131,42 +129,6 @@ label-occupied-underline = ${color.coccupied}
 type = internal/i3
 format = <label-mode>
 label-mode = %mode%
-
-[module/term]
-type = custom/text
-content = 
-content-foreground = ${color.fg-alt}
-click-left = termite &
-click-middle = urxvt &
-click-right = xfce4-terminal &
-
-[module/files]
-type = custom/text
-content = 
-content-padding = 1
-content-foreground = ${color.fg-alt}
-click-left = thunar &
-click-right = ranger &
-
-[module/browser]
-type = custom/text
-content = 
-content-padding = 1
-content-foreground = ${color.fg-alt}
-click-left = brave
-
-;==========================================================
-
-[module/mpd]
-type = internal/mpd
-;format-online = <toggle> <label-song> 
-format-online =  <label-song> 
-
-icon-play = 
-icon-pause = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 ;==========================================================
 
