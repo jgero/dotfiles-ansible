@@ -89,7 +89,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = workspaces term files browser
 modules-center = message
-modules-right = pkg volume network date time powermenu
+modules-right = network pkg volume cpu date time
  
 ;== Modules ========================================================
 
@@ -155,14 +155,6 @@ content-padding = 1
 content-foreground = ${color.fg-alt}
 click-left = brave
 
-[module/settings]
-type = custom/text
-content = 
-content-padding = 1
-content-foreground = ${color.fg-alt}
-click-left = xfce4-settings &
-click-right = lxappearance &
-
 ;==========================================================
 
 [module/mpd]
@@ -183,6 +175,13 @@ type = custom/script
 interval = 7200
 exec = ~/.config/polybar/updates.sh
 label =  %output%
+tail = true
+
+[module/cpu]
+type = custom/script
+interval = 2.0
+exec = ~/.config/polybar/cpu.sh
+label =  %output:02%%
 tail = true
 
 [module/volume]
@@ -209,10 +208,8 @@ type = internal/network
 interface = enp3s0
 interval = 3.0
 
-#format-connected-underline = #55aa55
 format-connected-prefix = " "
-format-connected-foreground = ${color.fg-alt}
-#label-connected = %downspeed%%upspeed%%linkspeed%%local_ip%
+format-connected-foreground = ${color.fg}
 label-connected = %downspeed% 
 
 #format-disconnected-underline = ${red}
@@ -230,14 +227,5 @@ type = internal/date
 interval = 30
 label =  %time%
 time =  %H:%M %p
-
-[module/powermenu]
-type = custom/text
-content = 
-content-padding = 2
-content-background = ${color.acolor}
-content-foreground = ${color.fg}
-click-left = pmenu_g
-click-right = pmenu_g
 
 ;== EOF ========================================================

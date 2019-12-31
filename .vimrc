@@ -154,21 +154,33 @@ set updatetime=300
 
 call plug#begin('~/.vim/plugged')
 
-" fuzzy finder, for faster file finding and opening
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
-Plug 'junegunn/fzf.vim'
-
-" conquer of completion -> autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" better status bar similar to powerline
+Plug 'vim-airline/vim-airline'
 
 " git integration
 Plug 'tpope/vim-fugitive'
 
+" fuzzy finder, for faster file finding and opening
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf.vim'
+
 " auto close brackets
 Plug 'jiangmiao/auto-pairs'
 
+" surround commands
+Plug 'tpope/vim-surround'
+
+" comment text with gc command
+Plug 'tpope/vim-commentary'
+
+" enable plugins to work with . command
+Plug 'tpope/vim-repeat'
+
 " dracula theme
 Plug 'dracula/vim', { 'as': 'dracula' }
+
+" conquer of completion -> autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " svelte syntax highlight
 Plug 'evanleck/vim-svelte'
