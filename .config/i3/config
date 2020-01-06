@@ -21,7 +21,7 @@ client.urgent           #fdd835 #fdd835 #ffffff #fdd835 #fdd835
 client.placeholder      #fdd835 #fdd835 #ffffff #fdd835 #fdd835
 
 # start polybar
-exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+# exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
 # =============================================================
 
@@ -143,12 +143,11 @@ bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # mode for power management
 set $Locker convert ~/.config/i3/lock-screen.jpg RGB:- | i3lock --raw 1920x1080:rgb --image /dev/stdin && sleep 1
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
@@ -187,3 +186,7 @@ mode "resize" {
 }
 
 bindsym Mod1+r mode "resize"
+
+bar {
+        status_command i3status
+}

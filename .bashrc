@@ -10,9 +10,11 @@ PS1='[\u@\h \W]\$ '
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+neofetch
+
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
-alias dotfiles='/usr/bin/git --git-dir=/home/archj/.dotfiles/ --work-tree=/home/archj'
+alias dotfiles='/usr/bin/git --git-dir=/home/jgero/.dotfiles/ --work-tree=/home/jgero'

@@ -154,9 +154,6 @@ set updatetime=300
 
 call plug#begin('~/.vim/plugged')
 
-" better status bar similar to powerline
-Plug 'vim-airline/vim-airline'
-
 " git integration
 Plug 'tpope/vim-fugitive'
 
