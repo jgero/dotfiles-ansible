@@ -19,7 +19,7 @@ set t_Co=256"]
 
 
 
-" coc configuration
+nmap <f1> <nop>
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -160,6 +160,9 @@ Plug 'tpope/vim-fugitive'
 " fuzzy finder, for faster file finding and opening
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
+
+" better autocompletion for a lot of languages
+Plug 'sheerun/vim-polyglot'
 
 " auto close brackets
 Plug 'jiangmiao/auto-pairs'
