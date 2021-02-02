@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "json",
+    "svelte",
+    "angular",
+    "html"
+  ],
+  "coc.preferences.extensionUpdateCheck": "daily"
+}
