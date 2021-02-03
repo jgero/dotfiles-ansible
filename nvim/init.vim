@@ -16,3 +16,4 @@ source $HOME/.config/nvim/keys/nerd-tree.vim
 source $HOME/.config/nvim/keys/lightline.vim
 source $HOME/.config/nvim/keys/coc.vim
 source $HOME/.config/nvim/keys/nerdcommenter.vim
+source $HOME/.config/nvim/keys/fzf.vim

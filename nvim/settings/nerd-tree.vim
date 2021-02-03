@@ -1,3 +1,7 @@
+" automatically change dir and set working directory
+set autochdir
+let NERDTreeChDirMode=2
+
 " setup nerdtree with icons
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1

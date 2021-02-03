@@ -24,7 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   " File Search
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   " intellisense
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
