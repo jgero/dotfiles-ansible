@@ -36,6 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'sheerun/vim-polyglot'
   " filetype from context
   Plug 'Shougo/context_filetype.vim'
+  " better text navigation
+  Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
