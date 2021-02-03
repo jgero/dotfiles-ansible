@@ -18,8 +18,9 @@ fu! NERDCommenter_before()
 endfu
 
 fu! NERDCommenter_after()
+  let g:ft = &ft
   if (g:ft == 'html') || (g:ft == 'svelte')
     exec 'setf ' . g:ft
-    let g:ft = ''
+    g:ft = ''
   endif
 endfu

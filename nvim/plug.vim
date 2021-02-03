@@ -20,9 +20,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'jiangmiao/auto-pairs'
   " git changes next to line numbers
   Plug 'mhinz/vim-signify'
-  " File Explorer with Icons
-  Plug 'scrooloose/nerdtree'
-  Plug 'ryanoasis/vim-devicons'
+  " icons
+  Plug 'lambdalisue/nerdfont.vim'
   " File Search
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'

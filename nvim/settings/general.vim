@@ -1,6 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
+
 " general settings
 colorscheme onedark
 syntax enable                           " Enables syntax highlighing
@@ -29,3 +30,4 @@ set nowritebackup                       " This is recommended by coc
 set hidden                              " This is recommended by coc
 set updatetime=100                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
+set autochdir                           " automatically change dir and set working directory
