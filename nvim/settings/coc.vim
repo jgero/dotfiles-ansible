@@ -84,8 +84,8 @@ let g:coc_explorer_global_presets = {
 " close nvim if the explorer is the only open buffer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 " open explorer when nvim is opened
-augroup MyCocExplorer
-  autocmd!
-  autocmd VimEnter * sil! au! FileExplorer *
-  autocmd BufEnter * let d = expand('%') | if isdirectory(d) | silent! bd | exe 'CocCommand explorer ' . d | endif
-augroup END
+"augroup MyCocExplorer
+  "autocmd!
+  "autocmd VimEnter * sil! au! FileExplorer *
+  "autocmd BufEnter * let d = expand('%') | if isdirectory(d) | silent! bd | exe 'CocCommand explorer ' . d | endif
+"augroup END
