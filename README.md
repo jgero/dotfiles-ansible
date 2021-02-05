@@ -1,6 +1,6 @@
 # Dotfiles
 
-Contains dotfiles of my current setup.
+Contains dotfiles of my current setup. Comes with an install script to do the setup. Be careful, it creates symlinks and overwrites the currently existing files.
 
 ___screenshots coming soon (TM)___
 
