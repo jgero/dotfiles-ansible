@@ -1,82 +1,36 @@
 # Dotfiles
 
-## Packages
+Contains dotfiles of my current setup.
 
-- dhcpcd
-- Xorg
-- i3-wm
-- i3lock
-- imagemagick
-- powerline
-- powerline-fonts
-- polybar
-- google material design icon font
-  - ttf-material-icons-git r124.224895a86-1
-- pamixer
-- vim
-- nodejs
-- npm
-- termite
-- polkit (to shutdown and such things as non-root)
+___screenshots coming soon (TM)___
 
-autoconf 2.69-6
-automake 1.16.1-2
-base 2-2
-binutils 2.33.1-2
-bison 3.5-1
-brave-bin 1:1.1.22-1
-cryptsetup 2.2.2-1
-device-mapper 2.02.186-4
-diffutils 3.7-3
-dmenu 4.9-1
-docker 1:19.03.5-1
-e2fsprogs 1.45.4-2
-fakeroot 1.24-2
-flex 2.6.4-3
-gcc 9.2.0-4
-git 2.24.1-4
-grub 2:2.04-4
-i3-wm 4.17.1-1
-i3lock 2.12-1
-imagemagick 7.0.9.10-1
-inetutils 1.9.4-8
-jfsutils 1.1.15-7
-less 551-3
-linux 5.4.6.arch3-1
-linux-firmware 20191220.6871bff-1
-logrotate 3.15.1-2
-lvm2 2.02.186-4
-m4 1.4.18-3
-make 4.2.1-4
-man-db 2.9.0-1
-man-pages 5.04-2
-mdadm 4.1-2
-netctl 1.20-2
-nodejs 13.5.0-2
-npm 6.13.4-1
-openssh 8.1p1-2
-otf-font-awesome-4 4.7.0-5
-pacman-contrib 1.3.0-1
-pamixer 1.4-2
-patch 2.7.6-8
-perl 5.30.1-1
-pkgconf 1.6.3-3
-polybar 3.4.1-1
-powerline 2.7-4
-powerline-fonts 2.7-4
-pulseaudio 13.0-2
-reiserfsprogs 3.6.27-3
-s-nail 14.9.15-3
-sudo 1.8.29-1
-sysfsutils 2.1.0-11
-termite 15-1
-texinfo 6.7-2
-usbutils 012-2
-vim 8.1.2268-2
-which 2.21-5
-xf86-video-nouveau 1.0.16-1
-xfsprogs 5.3.0-1
-xorg-server 1.20.6-2
-xorg-xinit 1.4.1-1
-xterm 351-1
+## Zsh
+
+The combination of oh my zsh and fzf enable a very easy and efficient usage of the terminal.
+
+### Required software
+
+- zsh
+- oh my Zsh!
+- fzf
+
+## Neovim
+
+- onedark theme with lightline
+- intellisense for svelte, angular and other languages I need often
+  - coc
+  - polyglot
+  - easy commenting even in svelte with nerdcommenter and context-filetype
+- efficiency improvements
+  - sneak
+  - auto pair brackets
+  - surround
+  - git integration
+  - fzf
+
+### Required software
+
+- neovim
+- node.js + npm (for coc)
+- fzf
 
