@@ -34,7 +34,13 @@ The combination of oh my zsh and fzf enable a very easy and efficient usage of t
 - node.js + npm (for coc)
 - fzf
 
-## Konsole
+## KDE
+
+All `.kksrc` files contain shortcuts which have to be imported via the manjaro shortcut settings manager.
+
+The kwin shortcuts are changed to make switching between windows and desktops more vim-like because I like consistency in my keyboard commands.
+
+### Konsole
 
 Configurations for a profile with colors and preferences like default shell.
 
