@@ -6,7 +6,7 @@ ___screenshots coming soon (TM)___
 
 ## Zsh
 
-The combination of oh my zsh and fzf enable a very easy and efficient usage of the terminal.
+The combination of oh my zsh and fzf enable a very easy and efficient usage of the terminal. Depending on the package manager the keybindings may not work out of the box. In this case go to the repo of fzf and copy the keybindings script manually.
 
 ### Required software
 
