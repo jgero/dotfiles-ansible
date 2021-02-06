@@ -1,6 +1,6 @@
 # Dotfiles
 
-Contains dotfiles of my current setup. Comes with an install script to do the setup. Be careful, it creates symlinks and overwrites the currently existing files.
+Contains dotfiles of my Manjaro KDE setup. Comes with an install script to do the setup. Be careful, it creates symlinks and overwrites the currently existing files.
 
 ___screenshots coming soon (TM)___
 
@@ -33,4 +33,8 @@ The combination of oh my zsh and fzf enable a very easy and efficient usage of t
 - neovim
 - node.js + npm (for coc)
 - fzf
+
+## Konsole
+
+Configurations for a profile with colors and preferences like default shell.
 
