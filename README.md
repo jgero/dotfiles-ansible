@@ -42,5 +42,9 @@ The kwin shortcuts are changed to make switching between windows and desktops mo
 
 ### Konsole
 
-Configurations for a profile with colors and preferences like default shell.
+Configurations for a profile with colors and preferences like default shell. Because of a bug in Konsole the nerdicons in the coc-explorer are broken. For now I removed them as workaround.
+
+## TODO
+
+- some kind of vim-startpage to avoid netrw when opening nvim on a directory
 
