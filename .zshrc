@@ -20,6 +20,8 @@ alias vim="nvim"
 alias dotfiles="nvim ~/.dotfiles"
 # go home
 alias home="cd ~/"
+# automatically start latex container
+alias latex='podman run -v ${PWD}/:/app/ -it --rm ghcr.io/jgero/latex-container/compile-latex-container:v6'
 
 # PATH ----------------------------------------------------------------------------------------
 
@@ -29,6 +31,9 @@ export PATH="$HOME/Documents/latex-helper:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 
 # OTHER ENVIRONMENT VARIABLES -----------------------------------------------------------------
+
+# preferred container runtime (used in some of my makefiles)
+export CONTAINER_RUNTIME=podman
 # used for auto sourcing init.vim
 export MYVIMRC=$HOME/.config/nvim/init.vim
 
