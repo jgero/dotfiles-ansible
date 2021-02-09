@@ -15,3 +15,5 @@
   tool = vimdiff
 [pager]
 	branch = false
+[push]
+	followTags = true
