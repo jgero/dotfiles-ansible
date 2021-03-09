@@ -38,7 +38,9 @@ The combination of oh my zsh and fzf enable a very easy and efficient usage of t
 - node.js + npm (for coc)
 - fzf
 
-## Setup from scratch with snapshots, BTRFS, Gnome, ...
+## Setup
+
+### Install Arch from scratch with BTRFS, filesystem snapshots, Gnome, ...
 
 The setup will work for a system with a german keyboard and EN language. It will show how the installation for BTRFS with snapshots with snapper and the Gnome desktop works. A lot of this is from [this](https://youtu.be/Xynotc9BKe8) guide on YouTube.
 
@@ -124,7 +126,16 @@ Directly when running the ISO:
 - enable GDM so systems boots into gui on next reboot: `sudo systemctl enable gdm`
   - I use an intel graphics card and had problems getting gdm and gnome to work, an [early KMS start](https://wiki.archlinux.org/index.php/Kernel_mode_setting#Early_KMS_start) fixed the problem
 - now you can reboot and should land in the gnome desktop
-- new GNOME versions use wayland by default, which [you can also use with firefox](https://wiki.archlinux.org/index.php/Firefox#Wayland)
+
+### Additional configurations
+
+#### Firefox
+
+GNOME uses wayland by default. Firefox also supports wayland, but for it to work a systemd environment variable has to be set. As always the [ArchWiki has very nice documentation on how to do this](https://wiki.archlinux.org/index.php/Firefox#Wayland).
+
+#### Podman
+
+Podman is a very nice Docker alternative without daemon. It also has a rootless mode which needs a bit of setup, but as always the [ArchWiki has your back](https://wiki.archlinux.org/index.php/Podman#Rootless_Podman) with documentation for how to setup subuids, subgids, make systemd use cgroups v2 and [setup user sessions](https://wiki.archlinux.org/index.php/Systemd/User#Basic_setup). This allows strong sandboxing without needing root privileges.
 
 ## TODO
 
