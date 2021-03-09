@@ -4,6 +4,7 @@ Contains dotfiles of my Arch GNOME setup. Comes with an install script to do the
 
 Some key remarks about this setup:
 - It uses BTRFS and snapper with automatic snapshots on pacman transactions
+- Uses the flat-remix for [GTK](https://github.com/daniruiz/Flat-Remix-GTK) and [GNOME](https://github.com/daniruiz/flat-remix-gnome)
 
 ___screenshots coming soon (TM)___
 
@@ -36,16 +37,6 @@ The combination of oh my zsh and fzf enable a very easy and efficient usage of t
 - neovim
 - node.js + npm (for coc)
 - fzf
-
-## KDE
-
-All `.kksrc` files contain shortcuts which have to be imported via the manjaro shortcut settings manager.
-
-The kwin shortcuts are changed to make switching between windows and desktops more vim-like because I like consistency in my keyboard commands.
-
-### Konsole
-
-Configurations for a profile with colors and preferences like default shell. Because of a bug in Konsole the nerdicons in the coc-explorer are broken. For now I removed them as workaround.
 
 ## Setup from scratch with snapshots, BTRFS, Gnome, ...
 
@@ -130,8 +121,10 @@ Directly when running the ISO:
 - install snap-pac `sudo pacman -S snap-pac` to create snapshots automatically on pacman transactions
 - read in the arch wiki whether you should install a graphics driver (look [here](https://wiki.archlinux.org/index.php/Intel_graphics) for intel)
 - install GNOME and GNOME-Tweaks as desktop with `sudo pacman -S gnome gnome-tweaks`
-- enable GDM so systems boots into gui on next reboot: `systemctl enable gdm`
+- enable GDM so systems boots into gui on next reboot: `sudo systemctl enable gdm`
+  - I use an intel graphics card and had problems getting gdm and gnome to work, an [early KMS start](https://wiki.archlinux.org/index.php/Kernel_mode_setting#Early_KMS_start) fixed the problem
 - now you can reboot and should land in the gnome desktop
+- new GNOME versions use wayland by default, which [you can also use with firefox](https://wiki.archlinux.org/index.php/Firefox#Wayland)
 
 ## TODO
 
