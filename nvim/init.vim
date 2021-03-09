@@ -9,6 +9,7 @@ source $HOME/.config/nvim/settings/coc.vim
 source $HOME/.config/nvim/settings/context-filetype.vim
 source $HOME/.config/nvim/settings/nerdcommenter.vim
 source $HOME/.config/nvim/settings/sneak.vim
+source $HOME/.config/nvim/settings/startify.vim
 
 " keybindings
 source $HOME/.config/nvim/keys/general.vim
