@@ -131,7 +131,7 @@ Directly when running the ISO:
 
 #### Firefox
 
-GNOME uses wayland by default. Firefox also supports wayland, but for it to work a systemd environment variable has to be set. As always the [ArchWiki has very nice documentation on how to do this](https://wiki.archlinux.org/index.php/Firefox#Wayland).
+GNOME uses wayland by default. Firefox also supports wayland, but for it to work a systemd environment variable has to be set. The active Window Protocol can be checked at `about:support`. As always the [ArchWiki has very nice documentation on how to do this](https://wiki.archlinux.org/index.php/Firefox#Wayland).
 
 #### Podman
 
