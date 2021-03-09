@@ -50,3 +50,11 @@ plugins=(git fzf)
 
 # keybindings for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# STARTUP SCRIPT -------------------------------------------------------------------------------
+
+# go to git root if in a git repo
+if git rev-parse --is-insider-work-tree > /dev/null 2>&1; then
+  gitroot
+fi;
+
