@@ -37,21 +37,27 @@ export CONTAINER_RUNTIME=podman
 # used for auto sourcing init.vim
 export MYVIMRC=$HOME/.config/nvim/init.vim
 
-# OH MY ZSH ------------------------------------------------------------------------------------
+# OH MY ZSH PLUGINS ---------------------------------------------------------------------------
+
+# config for autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
+bindkey '^ ' autosuggest-accept
+
+# LOAD OH MY ZSH ------------------------------------------------------------------------------
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/jgero/.oh-my-zsh"
+# oh my zsh plugins
+plugins=(git fzf zsh-autosuggestions)
 # load oh my zsh
 source $ZSH/oh-my-zsh.sh
-# oh my zsh plugins
-plugins=(git fzf)
 
-# OTHER SOURCES --------------------------------------------------------------------------------
+# OTHER SOURCES -------------------------------------------------------------------------------
 
 # keybindings for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# STARTUP SCRIPT -------------------------------------------------------------------------------
+# STARTUP SCRIPT ------------------------------------------------------------------------------
 
 # go to git root if in a git repo
 if git rev-parse --is-insider-work-tree > /dev/null 2>&1; then

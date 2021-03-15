@@ -1,6 +1,6 @@
 # Dotfiles
 
-Contains dotfiles of my Arch GNOME setup. Comes with an install script to do the setup. Be careful, it creates symlinks and overwrites the currently existing files.
+Contains dotfiles of my Arch GNOME setup. Comes with an install script to set up gitconfig and neovim. Be careful, it creates symlinks and overwrites the currently existing files.
 
 Some key remarks about this setup:
 - It uses BTRFS and snapper with automatic snapshots on pacman transactions
@@ -8,35 +8,25 @@ Some key remarks about this setup:
 
 ___screenshots coming soon (TM)___
 
-## Zsh
+## Software
 
-The combination of oh my zsh and fzf enable a very easy and efficient usage of the terminal. Depending on the package manager the keybindings may not work out of the box. In this case go to the repo of fzf and copy the keybindings script manually.
+### For development
 
-### Required software
+#### Shell: Zsh
 
-- zsh
-- oh my Zsh!
-- fzf
+The combination of oh my zsh and fzf enable a very easy and efficient usage of the terminal. Depending on the package manager the keybindings may not work out of the box. In this case go to the repo of fzf and copy the [keybindings script](https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh) manually. The config needs zsh, oh my Zsh! and fzf to be installed to work.
 
-## Neovim
+#### Editor: Neovim
 
-- onedark theme with lightline
-- intellisense for svelte, angular and other languages I need often
-  - coc
-  - polyglot
-  - easy commenting even in svelte with nerdcommenter and context-filetype
-- efficiency improvements
-  - sneak
-  - auto pair brackets
-  - surround
-  - git integration
-  - fzf
+Uses the nice onedark theme and lightline for a nice visual setup. Provides intellisense for svelte, angular and other languages I often need with coc and polyglot. Includes nice commenting features which also work with svelte by using a combination fo context-filetype and nerdcommenter.
 
-### Required software
+Extensions like sneak, auto pair brackets, surround, git integration and fzf working with vim is extremely efficient.
 
-- neovim
-- node.js + npm (for coc)
-- fzf
+Needs neovim, node.js, npm and fzf to be installed.
+
+### Desktop / Utilities
+
+For the desktop environment I use GNOME and GTK with the flat-remix themes. The Arch linux update indicator extension provides a nice sys-tray icon that shows available updates. For nice screenshots flameshot probably provides all functions you will need.
 
 ## Setup
 
@@ -129,6 +119,10 @@ Directly when running the ISO:
 
 ### Additional configurations
 
+#### Boot
+
+To speed up the boot process a bit, the menu can be skipped unless the shift key is pressed like described [in this article of the ArchWiki](https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Hide_GRUB_unless_the_Shift_key_is_held_down);
+
 #### Firefox
 
 GNOME uses wayland by default. Firefox also supports wayland, but for it to work a systemd environment variable has to be set. The active Window Protocol can be checked at `about:support`. As always the [ArchWiki has very nice documentation on how to do this](https://wiki.archlinux.org/index.php/Firefox#Wayland).
@@ -137,7 +131,7 @@ GNOME uses wayland by default. Firefox also supports wayland, but for it to work
 
 Podman is a very nice Docker alternative without daemon. It also has a rootless mode which needs a bit of setup, but as always the [ArchWiki has your back](https://wiki.archlinux.org/index.php/Podman#Rootless_Podman) with documentation for how to setup subuids, subgids, make systemd use cgroups v2 and [setup user sessions](https://wiki.archlinux.org/index.php/Systemd/User#Basic_setup). This allows strong sandboxing without needing root privileges.
 
-## TODO
+#### Reflector
 
-- some kind of vim-startpage to avoid netrw when opening nvim on a directory
+By default the automatic refreshing of reflector is not enabled. Customize the `reflector.conf` file and enable the systemd timer to automatically keep the mirrorlist up to date. Again consult the [ArchWiki](https://wiki.archlinux.org/index.php/Reflector) for details.
 
