@@ -4,5 +4,7 @@
 ln -sf $PWD/nvim $HOME/.config/nvim
 # git
 ln -sf $PWD/.gitconfig $HOME/.gitconfig
-# zsh
-ln -sf $PWD/.zshrc $HOME/.zshrc
+
+# bash
+mkdir -p $HOME/.bashrc.d
+ln -sf $PWD/bash/*.bash $HOME/.bashrc.d

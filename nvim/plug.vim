@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Better Comments
-  Plug 'preservim/nerdcommenter'
+  Plug 'tomtom/tcomment_vim'
   " Repeat stuff (fixes '.' command for plugins)
   Plug 'tpope/vim-repeat'
   " Surround
@@ -32,8 +32,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'joshdick/onedark.vim'
   " better syntax highlighting
   Plug 'sheerun/vim-polyglot'
-  " filetype from context
-  Plug 'Shougo/context_filetype.vim'
   " better text navigation
   Plug 'justinmk/vim-sneak'
   " fancy vim startscreen

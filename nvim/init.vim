@@ -6,8 +6,6 @@ source $HOME/.config/nvim/settings/general.vim
 source $HOME/.config/nvim/settings/lightline.vim
 source $HOME/.config/nvim/settings/onedark.vim
 source $HOME/.config/nvim/settings/coc.vim
-source $HOME/.config/nvim/settings/context-filetype.vim
-source $HOME/.config/nvim/settings/nerdcommenter.vim
 source $HOME/.config/nvim/settings/sneak.vim
 source $HOME/.config/nvim/settings/startify.vim
 
