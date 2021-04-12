@@ -26,7 +26,7 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
 " open terminal on alt+, and use zsh
 function! OpenTerminal()
-  split term://zsh
+  split term://bash
   resize 10
 endfunction
 nnoremap <silent> <a-,> :call OpenTerminal()<CR>
