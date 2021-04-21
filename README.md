@@ -36,7 +36,7 @@ To not disturb the service onece it's running the files are copied insted of lin
 
 ### restic
 
-This setup is more or less copied from [an article in the fedora magazine](https://fedoramagazine.org/automate-backups-with-restic-and-systemd/).
+This setup is more or less a combination of [an article in the fedora magazine](https://fedoramagazine.org/automate-backups-with-restic-and-systemd/) and [this post](https://askubuntu.com/questions/25071/how-to-run-a-script-when-a-specific-flash-drive-is-mounted). One service syncs everyting to a online repository once per day, triggered by a timer, and the other service syncs to a USB hard drive, triggered by mounting of that specific drive to the system.
 
 To setup backups, a password and repository has to be specified. You have to init the repository before starting the service and add the `~/.config/systemd/user/restic-creds.env` file which has to look like this:
 
@@ -45,8 +45,10 @@ RESTIC_PASSWORD="xxxxx"
 RESTIC_REPOSITORY="xxxxx"
 ```
 
+Two of these credential files are needed, one for the remote repositry and one on the hard drive.
+
 Before starting the services reload systemd: `systemctl --user daemon-reload`.
-These services are oneshots and can be run manually to test if they work: `systemctl --user start restic-backup` or `systemctl --user start restic-prune`.
+These services for the remote repo are oneshots and can be run manually to test if they work: `systemctl --user start restic-backup` or `systemctl --user start restic-prune`.
 
 After symlinking the files to your config and setting up your credential file you can run `systemctl --user enable --now restic-backup.timer` and `systemctl --user enable --now restic-prune.timer` to start the automatic backups.
 
