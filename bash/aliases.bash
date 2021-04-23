@@ -1,7 +1,7 @@
 # ALIASES -------------------------------------------------------------------------------------
 
 # faster vim access
-alias vim="nvim"
+alias vim="~/repos/nvim.appimage"
 # open dotfiles in vim
 alias dotfiles="nvim ~/.dotfiles"
 # automatically start latex container
