@@ -16,11 +16,14 @@ return require('packer').startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, { 'nvim-lua/plenary.nvim'} }
     }
-    use 'gruvbox-community/gruvbox'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
     use 'JoosepAlviste/nvim-ts-context-commentstring'
     use 'tpope/vim-repeat'
+
+    -- visuals
+    use 'gruvbox-community/gruvbox'
+    use 'folke/tokyonight.nvim'
 
     -- git stuff
     use 'tpope/vim-fugitive'

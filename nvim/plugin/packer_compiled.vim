@@ -127,6 +127,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-commentary"

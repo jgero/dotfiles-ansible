@@ -1,7 +1,10 @@
--- colors
 vim.o.termguicolors = true
-vim.cmd [[
-    silent! colorscheme gruvbox
-    highlight Normal guibg=none
-]]
 
+-- tokyonight and gruvbox are installed
+vim.cmd [[
+    silent! colorscheme tokyonight
+    augroup custom_highlight
+        autocmd!
+        au ColorScheme * highlight Normal guibg=none
+    augroup END
+]]

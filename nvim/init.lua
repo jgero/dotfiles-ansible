@@ -12,7 +12,6 @@ utils.opt('b', 'tabstop', 4)
 utils.opt('b', 'softtabstop', 4)
 utils.opt('b', 'shiftwidth', 4)
 utils.opt('b', 'expandtab', true)
-utils.opt('b', 'smartindent', true)
 
 -- auto source vimrc from project dirs if they exist
 utils.opt('o', 'exrc', true)
@@ -46,7 +45,6 @@ utils.opt('o', 'completeopt', 'menuone,noselect')
 utils.opt('o', 'cmdheight', 2)
 
 -- import configs
-require('colors')
 require('search')
 require('clipboard')
 require('config.telescope')
@@ -54,4 +52,5 @@ require('config.gitsigns')
 require('config.autopairs')
 require('config.lsp')
 require('config.treesitter')
+require('colors')
 
