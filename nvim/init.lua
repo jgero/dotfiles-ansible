@@ -30,6 +30,8 @@ utils.opt('o', 'hidden', true)
 
 utils.opt('w', 'wrap', false)
 utils.opt('w', 'colorcolumn', '100')
+-- this enables breaking lines with 'gq'
+utils.opt('b', 'textwidth', 100)
 
 -- history
 utils.opt('o', 'backup', false)
@@ -46,14 +48,10 @@ utils.opt('o', 'cmdheight', 2)
 -- import configs
 require('colors')
 require('search')
-require('telescope-config')
-require('gitsigns-config')
+require('clipboard')
+require('config.telescope')
+require('config.gitsigns')
+require('config.autopairs')
+require('config.lsp')
+require('config.treesitter')
 
--- highlighting
-require('treesitter')
-
--- auto pairs
-require('autopairs')
-
--- lsp
-require('lsp.general')

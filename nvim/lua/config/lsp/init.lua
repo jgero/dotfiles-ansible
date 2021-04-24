@@ -58,8 +58,8 @@ for _, server in pairs(servers_to_install) do
 end
 
 -- apply completion settings
-require('lsp.compe')
+require('config.lsp.compe')
 
 -- import other languages
-require('lsp.flutter')
+require('config.lsp.flutter')
 
