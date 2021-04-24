@@ -57,13 +57,9 @@ for _, server in pairs(servers_to_install) do
   require'lspconfig'[server].setup{ on_attach = on_attach }
 end
 
+-- apply completion settings
+require('lsp.compe')
+
 -- import other languages
 require('lsp.flutter')
-
--- completion-nvim settings
--- (completion-nvim is providing the autocomplete popup with the help of treesitter)
-vim.cmd("autocmd BufEnter * lua require'completion'.on_attach()", false)
-utils.map('i', '<tab>', '<Plug>(completion_smart_tab)', { noremap = false })
-utils.map('i', '<s-tab>', '<Plug>(completion_smart_s_tab)', { noremap = false })
-utils.map('i', '<c-space>', '<Plug>(completion_trigger)', { noremap = false })
 

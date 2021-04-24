@@ -71,10 +71,6 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
   ["completion-treesitter"] = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/completion-treesitter"
@@ -86,6 +82,14 @@ _G.packer_plugins = {
   gruvbox = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -114,6 +118,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 

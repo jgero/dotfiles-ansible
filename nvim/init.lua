@@ -42,7 +42,7 @@ utils.opt('o', 'undofile', true)
 utils.opt('o', 'scrolloff', 8)
 
 utils.opt('o', 'updatetime', 50)
-utils.opt('o', 'completeopt', 'menuone,noinsert,noselect')
+utils.opt('o', 'completeopt', 'menuone,noselect')
 utils.opt('o', 'cmdheight', 2)
 
 -- import configs
@@ -51,6 +51,9 @@ require('telescope-config')
 
 -- highlighting
 require('treesitter')
+
+-- auto pairs
+require('autopairs')
 
 -- lsp
 require('lsp.general')

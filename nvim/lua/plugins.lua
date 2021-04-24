@@ -20,13 +20,17 @@ return require('packer').startup(function()
 
     -- general lsp
     use 'neovim/nvim-lspconfig'
-    use 'kabouzeid/nvim-lspinstall'
-    use 'nvim-lua/completion-nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use {
       'nvim-treesitter/completion-treesitter',
       run = function() vim.cmd [[TSUpdate]] end
     }
+    -- auto install servers
+    use 'kabouzeid/nvim-lspinstall'
+    -- completion
+    use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/vim-vsnip'
+    use 'windwp/nvim-autopairs'
     -- flutter
     use {'akinsho/flutter-tools.nvim'}
 end)
