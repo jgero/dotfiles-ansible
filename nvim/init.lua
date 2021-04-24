@@ -48,6 +48,7 @@ utils.opt('o', 'cmdheight', 2)
 -- import configs
 require('colors')
 require('telescope-config')
+require('gitsigns-config')
 
 -- highlighting
 require('treesitter')

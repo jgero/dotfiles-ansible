@@ -11,12 +11,23 @@ end
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use 'nvim-lua/plenary.nvim' 
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/popup.nvim'}}
+        requires = {{'nvim-lua/popup.nvim'}, { 'nvim-lua/plenary.nvim'} }
     }
     use 'gruvbox-community/gruvbox'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-repeat'
+
+    -- git stuff
+    use 'tpope/vim-fugitive'
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
     -- general lsp
     use 'neovim/nvim-lspconfig'
