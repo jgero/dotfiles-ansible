@@ -21,8 +21,6 @@ utils.opt('o', 'exrc', true)
 utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
 
--- turn off highlights after search is done
-utils.opt('o', 'hlsearch', false)
 -- nomally ignore case but do not ignore case when search is in uppercase
 utils.opt('o', 'ignorecase', true)
 utils.opt('o', 'smartcase', true)
@@ -47,6 +45,7 @@ utils.opt('o', 'cmdheight', 2)
 
 -- import configs
 require('colors')
+require('search')
 require('telescope-config')
 require('gitsigns-config')
 

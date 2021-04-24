@@ -50,6 +50,16 @@ require('telescope').setup{
   }
 }
 
-utils.map('n', '<Leader>ff', ":lua require('telescope.builtin').find_files({previewer = false})<CR>")
-utils.map('n', '<leader>fg',  ":lua require('telescope.builtin').live_grep()<cr>")
+-- find files in current working dir
+utils.map('n', '<Leader>ff', ":lua require('telescope.builtin').find_files()<CR>")
+-- find words
+utils.map('n', '<leader>fw',  ":lua require('telescope.builtin').live_grep()<cr>")
+-- find in current buffers
+utils.map('n', '<leader>fb',  ":lua require('telescope.builtin').buffers()<cr>")
+-- find in help tags
+utils.map('n', '<leader>fh',  ":lua require('telescope.builtin').help_tags()<cr>")
+-- find files in notes
+utils.map('n', '<Leader>fn', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/Documents/sync/notes' } })<CR>")
+-- find files in dotfiles
+utils.map('n', '<Leader>fd', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/repos/dotfiles' } })<CR>")
 

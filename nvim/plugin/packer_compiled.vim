@@ -79,6 +79,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/gruvbox"
@@ -118,6 +122,22 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/jgero/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-repeat"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-vsnip"] = {
     loaded = true,
