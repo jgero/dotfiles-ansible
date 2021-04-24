@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use 'gruvbox-community/gruvbox'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
     use 'tpope/vim-repeat'
 
     -- git stuff
