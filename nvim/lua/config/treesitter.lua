@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { 'dart', 'latex', 'svelte', 'html', 'css', 'javascript' },
+    ensure_installed = { 'dart', 'latex', 'svelte', 'html', 'css', 'javascript', 'bash' },
     indent = {
       enable = true
     },
