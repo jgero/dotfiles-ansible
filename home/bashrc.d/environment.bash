@@ -2,6 +2,8 @@
 
 # default go path
 export PATH=$PATH:/usr/local/go/bin
+# add custom scripts dir
+export PATH=$PATH:/$HOME/repos/dotfiles/scripts
 
 # OTHER ENVIRONMENT VARIABLES -----------------------------------------------------------------
 
@@ -9,4 +11,5 @@ export PATH=$PATH:/usr/local/go/bin
 export CONTAINER_RUNTIME=podman
 # used for auto sourcing init.vim
 export MYVIMRC=$HOME/.config/nvim/init.vim
+export TASKRC=~/.config/.taskrc
 
