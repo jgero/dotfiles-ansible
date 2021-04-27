@@ -1,5 +1,3 @@
-local utils = require('utils')
-
 -- lspconfig setup
 -- these are the defaults so this should be first in the config
 local on_attach = function(client, bufnr)

@@ -52,6 +52,8 @@ require('telescope').setup{
 
 -- find files in current working dir
 utils.map('n', '<Leader>ff', ":lua require('telescope.builtin').find_files()<CR>")
+-- find GIT files in current working dir
+utils.map('n', '<Leader>fg', ":lua require('telescope.builtin').git_files()<CR>")
 -- find words
 utils.map('n', '<leader>fw',  ":lua require('telescope.builtin').live_grep()<cr>")
 -- find in current buffers
@@ -62,4 +64,6 @@ utils.map('n', '<leader>fh',  ":lua require('telescope.builtin').help_tags()<cr>
 utils.map('n', '<Leader>fn', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/Documents/sync/notes' } })<CR>")
 -- find files in dotfiles
 utils.map('n', '<Leader>fd', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/repos/dotfiles' } })<CR>")
+-- find in document symbols (this is insanely nice)
+utils.map('n', '<Leader>fs', ":lua require('telescope.builtin').lsp_document_symbols()<CR>")
 
