@@ -7,9 +7,10 @@ export PATH=$PATH:$HOME/repos/dotfiles/scripts
 
 # OTHER ENVIRONMENT VARIABLES -----------------------------------------------------------------
 
+# config home
+export XDG_CONFIG_HOME=$HOME/.config/
 # preferred container runtime (used in some of my makefiles)
 export CONTAINER_RUNTIME=podman
-# used for auto sourcing init.vim
-export MYVIMRC=$HOME/.config/nvim/init.vim
+# task config
 export TASKRC=~/.config/.taskrc
 

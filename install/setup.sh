@@ -53,6 +53,11 @@ else
     ln -sv ~/repos/dotfiles/home/bash_completion.d ~/.bash_completion.d
 fi
 
+# setup font
+mkdir -p ~/.local/share/fonts
+mv ~/repos/dotfiles/fonts/* ~/.local/share/fonts
+fc-cache -f -v
+
 # # systemd services with config files
 
 # # restic settings
