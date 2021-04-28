@@ -53,4 +53,6 @@ require('config.autopairs')
 require('config.lsp')
 require('config.treesitter')
 require('colors')
+require('terminal')
+require('buffers')
 
