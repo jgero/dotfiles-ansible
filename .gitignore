@@ -32,6 +32,7 @@ xdg_config/pipewire
 xdg_config/pulse
 xdg_config/systemd
 xdg_config/totem
+xdg_config/tool_state
 xdg_config/user-dirs.dirs
 xdg_config/user-dirs.locale
 xdg_config/yelp
