@@ -43,3 +43,6 @@ xdg_config/imsettings
 
 xdg_config/pavucontrol.ini
 
+systemd/env/restic_creds.env
+systemd/env/restic_creds_local.env
+

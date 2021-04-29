@@ -3,25 +3,26 @@
 # print all actions
 set -x
 
+mkdir -p $XDG_CONFIG_HOME/systemd/user
+
 # setup systemd backup services
 UNIT_DIR="$HOME/repos/dotfiles/systemd/units"
 ENV_DIR="$HOME/repos/dotfiles/systemd/env"
 
 # link the units
 for rc in "$UNIT_DIR/*"; do
-    if [ -f "$rc" ]; then
-        # the units have to be linked via systemd, otherwise they can't be enabled
-        systemctl --user link "$UNIT_DIR/$rc"
-    fi
+    systemctl --user link $rc
 done
 
 # link the environments
 for rc in "$ENV_DIR/*"; do
-    if [ -f "$rc" ]; then
-        ln -s $rc "$HOME/.config/systemd/user/$rc"
-    fi
+    ln -s $rc "$XDG_CONFIG_HOME/systemd/user/$(basename $rc)"
 done
 
-# TODO: check if the linking works and enable services
-# systemctl --user enable UNIT --now
+# reload the daemon
+systemctl --user daemon-reload
+# enable the services
+systemctl --user enable restic_prune.timer --now
+systemctl --user enable restic_backup.timer --now
+systemctl --user enable restic_backupToHarddrive --now
 

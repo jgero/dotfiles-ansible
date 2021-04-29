@@ -9,5 +9,5 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/Documents/sync/.task
+data.location=~/sync/.task
 
