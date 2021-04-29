@@ -6,7 +6,7 @@ the tools I use all the time. This is not a visual rice, this is a workflow rice
 I use taskwarrior, i3, bash, tmux and most importantly: neovim. 
 
 There are scripts in the __install__ directory to install packages, link the configs and setup the
-systemd services.
+systemd services. The repo has to be cloned into your `$HOME/repos/dotfiles` directory to work.
 
 ## restic backup
 
@@ -26,9 +26,9 @@ RESTIC_REPOSITORY="xxxxx"
 
 I often have random ideas about things completely unrelated to the stuff I am currently doing. So I
 wrote a script that opens a new buffer in nvim with the current date as filename and adds a line in
-it with the current time each time I open it (`scripts/quicknote`). With a keymapping for i3 (leader
-+ n) at opens this buffer in a floating window I can dump my ideas and have them in a chronological
-order to later sort stuff out.
+it with the current time each time I open it (`scripts/quicknote`). With a keymapping for i3
+(leader-n) at opens this buffer in a floating window I can dump my ideas and have them in a
+chronological order to later sort stuff out.
 
 ## neovim
 
