@@ -53,3 +53,11 @@ else
     ln -sv $HOME/repos/dotfiles/home/bash_completion.d $HOME/.bash_completion.d
 fi
 
+############################### fonts ######################################
+
+# copy fonts in local user's font dir
+mkdir -p $HOME/.local/share/fonts
+cp $HOME/repos/dotfiles/fonts/* $HOME/.local/share/fonts/
+# update font cache
+fc-cache -f -v
+

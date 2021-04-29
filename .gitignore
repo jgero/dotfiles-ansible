@@ -36,3 +36,8 @@ xdg_config/tool_state
 xdg_config/user-dirs.dirs
 xdg_config/user-dirs.locale
 xdg_config/yelp
+xdg_config/xfce4
+xdg_config/Thunar
+xdg_config/Mousepad
+xdg_config/imsettings
+
