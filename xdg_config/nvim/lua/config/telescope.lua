@@ -61,7 +61,7 @@ utils.map('n', '<leader>fb',  ":lua require('telescope.builtin').buffers()<cr>")
 -- find in help tags
 utils.map('n', '<leader>fh',  ":lua require('telescope.builtin').help_tags()<cr>")
 -- find files in notes
-utils.map('n', '<Leader>fn', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/Documents/sync/notes' } })<CR>")
+utils.map('n', '<Leader>fn', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/sync/notes' } })<CR>")
 -- find files in dotfiles
 utils.map('n', '<Leader>fd', ":lua require('telescope.builtin').find_files({ search_dirs = { '/home/jgero/repos/dotfiles' } })<CR>")
 -- find in document symbols (this is insanely nice)

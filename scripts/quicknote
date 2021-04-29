@@ -2,7 +2,7 @@
 # -i is needed to follow my vim alias
 
 # create a quick note
-NOTE_FILE_NAME="$HOME/Documents/sync/notes/quick/note-$(date +%Y-%m-%d).md"
+NOTE_FILE_NAME="$HOME/sync/notes/quick/note-$(date +%Y-%m-%d).md"
 
 if [ ! -f $NOTE_FILE_NAME ]; then
   echo "# Notes for $(date +%Y-%m-%d)" > $NOTE_FILE_NAME
