@@ -1,5 +1,10 @@
 # Dotfiles
 
+## TODO
+
+- extra script to install dependencies with dnf
+- script to setup backups with restic and systemd
+
 Dotfiles for my Fedora workstation setup. They include the most important configurations of the tools I use all the time.
 
 - bash scripts for supplementary environment vairables and convenience

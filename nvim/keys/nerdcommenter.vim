@@ -1,1 +1,0 @@
-map gc <plug>NERDCommenterToggle
