@@ -2,5 +2,6 @@
 
 sudo dnf install \
     git make g++ unzip cmake curl ripgrep fzf alacritty nodejs npm ImageMagick \
-    xrandr arandr redshift tlp \
+    i3 \
+    xrandr arandr redshift tlp xinput \
     task restic thunderbird
