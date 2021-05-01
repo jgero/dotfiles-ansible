@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/var/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/var/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/var/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/var/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/var/home/jgero/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -73,83 +73,83 @@ time("Defining packer_plugins", true)
 _G.packer_plugins = {
   ["completion-treesitter"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/completion-treesitter"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/completion-treesitter"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   gruvbox = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-repeat"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/vim-repeat"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "/home/jgero/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+    path = "/var/home/jgero/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 

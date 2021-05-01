@@ -10,13 +10,13 @@ UNIT_DIR="$HOME/repos/dotfiles/systemd/units"
 ENV_DIR="$HOME/repos/dotfiles/systemd/env"
 
 # link the units
-for rc in "$UNIT_DIR/*"; do
-    systemctl --user link $rc
+for rc in $UNIT_DIR/*; do
+    systemctl --user link "$rc"
 done
 
 # link the environments
-for rc in "$ENV_DIR/*"; do
-    ln -s $rc "$XDG_CONFIG_HOME/systemd/user/$(basename $rc)"
+for rc in $ENV_DIR/*; do
+    ln -s "$rc" "$XDG_CONFIG_HOME/systemd/user/$(basename $rc)"
 done
 
 # reload the daemon

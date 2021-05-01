@@ -1,7 +1,5 @@
 # PATH ----------------------------------------------------------------------------------------
 
-# default go path
-export PATH=$PATH:/usr/local/go/bin
 # add custom scripts dir
 export PATH=$PATH:$HOME/repos/dotfiles/scripts
 

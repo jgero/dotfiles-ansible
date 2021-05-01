@@ -1,18 +1,21 @@
 # Dotfiles
 
-Dotfiles for my Fedora workstation i3 spin setup. They include the most important configurations of
+Dotfiles for my Fedora silverblue workstation. They include the most important configurations of
 the tools I use all the time. This is not a visual rice, this is a workflow rice.
 
-I use taskwarrior, i3, bash, tmux and most importantly: neovim. 
+I use taskwarrior, toolbox, bash, tmux and most importantly: neovim. 
 
-There are scripts in the __install__ directory to install packages, link the configs and setup the
+There are scripts in the `install` directory to link the configs and setup the
 systemd services. The repo has to be cloned into your `$HOME/repos/dotfiles` directory to work.
+
+In the future I want to add a script to automatically setup the complete OS, but currently this is
+just work in progress. (rpm-ostree, flatpaks, dnf, ...)
 
 ## restic backup
 
 To make it easy to manage different restic-repositories and to be able to push it to this github
-repo I split the repo and password files into separate env files. So to be able to run the provided services
-install script you have to create __2__ files for the 2 backup services with the names
+repo I split the repo and password files into separate env files. So to be able to run the provided
+services install script you have to create __2__ files for the 2 backup services with the names
 `restic_creds.env` and `restic_creds_local.env` in the `sytemd/env/` directory. This allows you to
 backup your files to different targets, for example I use a cloud and a hard drive. The contents of
 the env files with the credentials have to look like this:
@@ -26,9 +29,9 @@ RESTIC_REPOSITORY="xxxxx"
 
 I often have random ideas about things completely unrelated to the stuff I am currently doing. So I
 wrote a script that opens a new buffer in nvim with the current date as filename and adds a line in
-it with the current time each time I open it (`scripts/quicknote`). With a keymapping for i3
-(leader-n) at opens this buffer in a floating window I can dump my ideas and have them in a
-chronological order to later sort stuff out.
+it with the current time each time I open it (`scripts/quicknote`). With a keymapping that opens
+this buffer in a floating window I can dump my ideas and have them in a chronological order to later
+sort stuff out.
 
 ## neovim
 
