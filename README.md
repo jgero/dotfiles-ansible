@@ -36,5 +36,21 @@ sort stuff out.
 ## neovim
 
 My neovim config really is nothing special. It is more or less a setup of some nice plugins with all
-the neovim builtin goodness (lsp + treesitter)
+the neovim builtin goodness (lsp + treesitter).
+
+## keybindings
+
+### desktop/workspaces
+
+The keybindings for my desktop and window managing are not inluded here because I use Gnome and I
+just remapped the workspace switching to vim-like mappings with `Alt` (german qwertz) key as
+"leader".
+
+For quick terminal access i mapped `Alt+Enter` to start a new termainal and `Alt+n` to open my quick
+notes thing.
+
+### tmux
+
+I left the default `Ctrl+b` leader here. In the beginning it feels a bit weird but it's actually not
+as bad to type as it feels first.
 
