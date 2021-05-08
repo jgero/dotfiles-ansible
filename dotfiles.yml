@@ -5,6 +5,7 @@
     - xdg_config
     - devtools
     - fonts
+    - backup
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     dotfiles: "{{ home }}/repos/dotfiles"

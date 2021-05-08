@@ -1,0 +1,17 @@
+- name: check if settings file exists
+  stat: path="{{ config }}/systemd/user/restic_settings.env"
+  register: settings_f
+
+- name: remove settings file if it's there and is a regular file
+  file:
+    path="{{ config }}/systemd/user/restic_settings.env"
+    state=absent
+  when: settings_f.stat.isreg is defined and settings_f.stat.isreg
+
+- name: link settings file
+  file:
+    path="{{ config }}/{{ item }}"
+    src="{{ dotfiles }}/roles/backup/files/restic_settings.env"
+    state=link 
+    force=yes
+
