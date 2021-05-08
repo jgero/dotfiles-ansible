@@ -1,0 +1,3 @@
+- name: setup credential files
+  import_tasks: setup_credentials.yml
+

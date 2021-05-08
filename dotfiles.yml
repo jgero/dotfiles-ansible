@@ -3,6 +3,7 @@
   roles:
     - bash
     - xdg_config
+    - backup
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     dotfiles: "{{ home }}/repos/dotfiles"
