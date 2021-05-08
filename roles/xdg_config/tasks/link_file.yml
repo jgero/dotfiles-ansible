@@ -10,7 +10,7 @@
 
 - name: link config file
   file:
-    path="{{ home }}/{{ item }}"
+    path="{{ config }}/{{ item }}"
     src="{{ dotfiles }}/roles/xdg_config/files/{{ item }}"
     state=link 
     force=yes
