@@ -6,6 +6,7 @@
       - make
       - cmake
       - unzip
+      - tmux
       - ripgrep
       - fzf
       - xclip
