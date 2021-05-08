@@ -1,0 +1,4 @@
+- name: set up local workstation
+  hosts: local
+  roles:
+    - bash

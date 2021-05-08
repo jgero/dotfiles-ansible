@@ -1,0 +1,5 @@
+- name: link bashrc
+  import_tasks: rc.yml
+
+- name: link completion
+  import_tasks: completion.yml
