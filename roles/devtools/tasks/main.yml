@@ -1,0 +1,17 @@
+- name: install tools needed for development
+  dnf:
+    name:
+      - git
+      - g++
+      - make
+      - cmake
+      - unzip
+      - ripgrep
+      - fzf
+      - xclip
+      - tlp
+      - restic
+      - tlp
+      - thunderbird
+      - task
+

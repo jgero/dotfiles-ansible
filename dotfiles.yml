@@ -3,7 +3,8 @@
   roles:
     - bash
     - xdg_config
-    - backup
+    - devtools
+    - fonts
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     dotfiles: "{{ home }}/repos/dotfiles"
