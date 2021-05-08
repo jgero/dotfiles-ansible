@@ -1,8 +1,7 @@
 - name: enable backup timer
   systemd:
-    state: started
+    state: stopped
     enabled: yes
     scope: user
-    daemaon_reload: yes
     name: "{{ item }}"
 

@@ -4,14 +4,19 @@
 - name: link backup env
   import_tasks: link_env.yml
 
-- import_tasks: enable_service.yml
+- include_tasks: enable_service.yml
   loop:
     - "{{ dotfiles }}/roles/backup/files/restic_backupToHarddrive.service"
     - "{{ dotfiles }}/roles/backup/files/restic_backup.service"
     - "{{ dotfiles }}/roles/backup/files/restic_prune.service"
 
-- import_tasks: enable_timer.yml
+- include_tasks: enable_timer.yml
   loop:
     - "{{ dotfiles }}/roles/backup/files/restic_backup.timer"
     - "{{ dotfiles }}/roles/backup/files/restic_prune.timer"
+
+- include_tasks: start_timer.yml
+  loop:
+    - "restic_backup.timer"
+    - "restic_prune.timer"
 

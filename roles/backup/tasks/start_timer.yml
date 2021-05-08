@@ -1,0 +1,7 @@
+- name: start backup timer
+  systemd:
+    state: started
+    scope: user
+    daemon_reload: yes
+    name: "{{ item }}"
+
