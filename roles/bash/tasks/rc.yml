@@ -1,29 +1,35 @@
 - name: check the current rc file symlink
-  stat: path={{ lookup('env', 'HOME') }}/.bashrc
+  stat: path="{{ home }}/.bashrc"
   register: bashrc_f
 
 - name: remove .bashrc if it's there and is a regular file
-  file: path={{ lookup('env', 'HOME') }}/bashrc.d state=absent
+  file:
+    path="{{ home }}/bashrc.d"
+    state=absent
   when: bashrc_d.stat.isreg is defined and bashrc_d.stat.isreg
 
 - name: link .bashrc file
-    file: path={{ lookup('env', 'HOME') }}/.bashrc
-          src={{ lookup('env', 'DOTFILES') }}/roles/bash/files/.bashrc
-          state=link 
-          force=yes
+  file:
+    path="{{ home }}/.bashrc"
+    src="{{ dotilfes }}/roles/bash/files/.bashrc"
+    state=link 
+    force=yes
 
 
 - name: check the current rc dir symlink
-  stat: path={{ lookup('env', 'HOME') }}/bashrc.d
+  stat: path="{{ home }}/bashrc.d"
   register: bashrc_d
 
 - name: remove bashrc.d if it's there and is a dir
-  file: path={{ lookup('env', 'HOME') }}/bashrc.d state=absent
+  file:
+    path="{{ home }}/bashrc.d"
+    state=absent
   when: bashrc_d.stat.isdir is defined and bashrc_d.stat.isdir
 
 - name: link bashrc.d directory
-    file: path={{ lookup('env', 'HOME') }}/bashrc.d
-          src={{ lookup('env', 'DOTFILES') }}/roles/bash/files/bashrc.d
-          state=link 
-          force=yes
+  file: 
+    path="{{ home }}/bashrc.d"
+    src="{{ dotilfes }}/roles/bash/files/bashrc.d"
+    state=link 
+    force=yes
 

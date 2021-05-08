@@ -1,12 +1,17 @@
 - name: check the current symlink
-  stat: path={{ lookup('env', 'HOME') }}/bash_completion.d
+  stat: path="{{ home }}/bash_completion.d"
   register: bash_completion_d
 
 - name: remove bash_copmletion.d if it's there and is a dir
-  file: path={{ lookup('env', 'HOME') }}/bash_completion.d state=absent
+  file:
+    path="{{ home }}/bash_completion.d"
+    state=absent
   when: bash_completion_d.stat.isdir is defined and bash_completion_d.stat.isdir
 
 - name: link bash_completion.d directory
-    file: path={{ lookup('env', 'HOME') }}/bash_completion.d
-          src={{ lookup('env', 'DOTFILES') }}/roles/bash/files/bash_completion.d
-          state=link 
+  file:
+    path="{{ home }}/bash_completion.d"
+    src="{{ dotfiles }}/roles/bash/files/bash_completion.d"
+    state=link 
+    force=yes
+

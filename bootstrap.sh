@@ -2,17 +2,15 @@
 set -e
 
 # dotfiles' project root directory
-DOTFILES="$HOME/repos/dotfiles"
-# host file location
-HOSTS="$DOTFILES/hosts"
-# main playbook
-PLAYBOOK="$DOTFILES/dotfiles.yml"
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Installs ansible
-dnf install ansible
+# install ansible
+sudo dnf install ansible
 
-# Runs Ansible playbook using our user.
-ansible-playbook -i "$HOSTS" "$PLAYBOOK" --ask-become-pass
+# run Ansible playbook using our user
+ansible-playbook -i "$DOTFILES/hosts" "$DOTFILES/dotfiles.yml"
+    --ask-become-pass
+    --extra-vars "dotfiles=$DOTFILES home=$HOME config=$HOME/.config"
 
 exit 0
 
