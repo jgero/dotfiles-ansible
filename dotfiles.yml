@@ -2,3 +2,8 @@
   hosts: local
   roles:
     - bash
+  vars:
+    home: "{{ lookup('env', 'HOME') }}"
+    dotfiles: "{{ home }}/repos/dotfiles"
+    config: "{{ home }}/.config"
+

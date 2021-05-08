@@ -8,9 +8,7 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 sudo dnf install ansible
 
 # run Ansible playbook using our user
-ansible-playbook -i "$DOTFILES/hosts" "$DOTFILES/dotfiles.yml"
-    --ask-become-pass
-    --extra-vars "dotfiles=$DOTFILES home=$HOME config=$HOME/.config"
+ansible-playbook -i "$DOTFILES/hosts" "$DOTFILES/dotfiles.yml" --ask-become-pass
 
 exit 0
 

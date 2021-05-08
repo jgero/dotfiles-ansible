@@ -11,7 +11,7 @@
 - name: link .bashrc file
   file:
     path="{{ home }}/.bashrc"
-    src="{{ dotilfes }}/roles/bash/files/.bashrc"
+    src="{{ dotfiles }}/roles/bash/files/.bashrc"
     state=link 
     force=yes
 
@@ -29,7 +29,7 @@
 - name: link bashrc.d directory
   file: 
     path="{{ home }}/bashrc.d"
-    src="{{ dotilfes }}/roles/bash/files/bashrc.d"
+    src="{{ dotfiles }}/roles/bash/files/bashrc.d"
     state=link 
     force=yes
 
