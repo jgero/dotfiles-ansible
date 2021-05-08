@@ -1,0 +1,17 @@
+- name: check the config dir symlink
+  stat: path="{{ config }}/{{ item }}"
+  register: config_d
+
+- name: remove config dir if it's there and is a dir
+  file:
+    path="{{ config }}/{{ item }}"
+    state=absent
+  when: config_d.stat.isdir is defined and config_d.stat.isdir
+
+- name: link config directory
+  file: 
+    path="{{ config }}/{{ item }}"
+    src="{{ dotfiles }}/roles/xdg_config/files/{{ item }}"
+    state=link 
+    force=yes
+

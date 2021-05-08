@@ -1,0 +1,17 @@
+- name: check if config file exists
+  stat: path="{{ config }}/{{ item }}"
+  register: config_f
+
+- name: remove config file if it's there and is a regular file
+  file:
+    path="{{ config }}/{{ item }}"
+    state=absent
+  when: config_f.stat.isreg is defined and config_f.stat.isreg
+
+- name: link config file
+  file:
+    path="{{ home }}/{{ item }}"
+    src="{{ dotfiles }}/roles/xdg_config/files/{{ item }}"
+    state=link 
+    force=yes
+

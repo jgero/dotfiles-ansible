@@ -1,0 +1,15 @@
+- name: ensure config dir exists
+  file:
+    path: "{{ config }}"
+    state: directory
+
+- include_tasks: link_file.yml
+  loop:
+    - .taskrc
+
+- include_tasks: link_dir.yml
+  loop:
+    - nvim
+    - git
+    - tmux
+

@@ -2,6 +2,7 @@
   hosts: local
   roles:
     - bash
+    - xdg_config
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     dotfiles: "{{ home }}/repos/dotfiles"
