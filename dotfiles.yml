@@ -6,6 +6,7 @@
     - devtools
     - fonts
     - backup
+    - util_scripts
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     dotfiles: "{{ home }}/repos/dotfiles"

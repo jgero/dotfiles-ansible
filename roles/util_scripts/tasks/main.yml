@@ -1,0 +1,7 @@
+- include_tasks: link_dir.yml
+  loop:
+    - cheat
+    - gitroot
+    - quicknote
+    - selectProject
+
