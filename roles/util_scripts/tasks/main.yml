@@ -1,4 +1,4 @@
-- include_tasks: link_dir.yml
+- include_tasks: link_script.yml
   loop:
     - cheat
     - gitroot
