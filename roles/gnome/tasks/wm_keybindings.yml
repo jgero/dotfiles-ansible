@@ -1,5 +1,61 @@
-- name: rebind workspace movement
+- name: rebind workspace switch right
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-right"
-    value: "'<Alt>l'"
+    value: "['<Alt>l']"
+- name: rebind workspace switch left
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-left"
+    value: "['<Alt>h']"
+
+- name: rebind workspace move right
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
+    value: "['<Shift><Alt>l']"
+- name: rebind workspace move left
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/swimovetch-to-workspace-left"
+    value: "['<Shift><Alt>h']"
+
+- name: rebind workspace move window right
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
+    value: "['<Shift><Alt>l']"
+- name: rebind workspace move window left
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left"
+    value: "['<Shift><Alt>h']"
+
+- name: rebind workspace switch to 1
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-1"
+    value: "['<Alt>1']"
+- name: rebind workspace switch to 2
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-2"
+    value: "['<Alt>2']"
+- name: rebind workspace switch to 3
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-3"
+    value: "['<Alt>3']"
+- name: rebind workspace switch to 4
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-4"
+    value: "['<Alt>4']"
+
+- name: rebind workspace move to 1
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-1"
+    value: "['<Shift><Alt>1']"
+- name: rebind workspace move to 2
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-2"
+    value: "['<Shift><Alt>2']"
+- name: rebind workspace move to 3
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-3"
+    value: "['<Shift><Alt>3']"
+- name: rebind workspace move to 4
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-4"
+    value: "['<Shift><Alt>4']"
 
