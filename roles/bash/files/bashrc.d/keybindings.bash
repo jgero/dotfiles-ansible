@@ -5,5 +5,5 @@ then
 fi
 
 # bind ctrl-f to the tmux session switcher
-bind -x '"\C-f": "$HOME/repos/dotfiles/scripts/selectProject"'
+bind -x '"\C-f": "$HOME/repos/dotfiles/roles/util_scripts/files/selectProject"'
 

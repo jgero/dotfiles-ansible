@@ -1,7 +1,7 @@
 # PATH ----------------------------------------------------------------------------------------
 
 # add custom scripts dir
-export PATH=$PATH:$HOME/repos/dotfiles/scripts
+export PATH=$PATH:$HOME/repos/dotfiles/roles/util_scripts/files
 
 # OTHER ENVIRONMENT VARIABLES -----------------------------------------------------------------
 
