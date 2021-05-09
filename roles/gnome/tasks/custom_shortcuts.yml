@@ -12,7 +12,7 @@
 - name: terminal shortcut binding
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
-    value: "'<Mod1><Enter>'"
+    value: "'<Alt>Return'"
 
 - name: quicknote shortcut name
   dconf:
@@ -25,7 +25,7 @@
 - name: quicknote shortcut binding
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
-    value: "'<Mod1>n'"
+    value: "'<Alt>n'"
 
 - name: enable custom keybindings
   dconf:
