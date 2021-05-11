@@ -1,0 +1,22 @@
+- name: setup credential files
+  import_tasks: setup_credentials.yml
+
+- name: link backup env
+  import_tasks: link_env.yml
+
+- include_tasks: enable_service.yml
+  loop:
+    - "{{ dotfiles }}/roles/backup/files/restic_backupToHarddrive.service"
+    - "{{ dotfiles }}/roles/backup/files/restic_backup.service"
+    - "{{ dotfiles }}/roles/backup/files/restic_prune.service"
+
+- include_tasks: enable_timer.yml
+  loop:
+    - "{{ dotfiles }}/roles/backup/files/restic_backup.timer"
+    - "{{ dotfiles }}/roles/backup/files/restic_prune.timer"
+
+- include_tasks: start_timer.yml
+  loop:
+    - "restic_backup.timer"
+    - "restic_prune.timer"
+

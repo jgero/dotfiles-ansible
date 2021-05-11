@@ -1,0 +1,9 @@
+- name: add custom shortcuts
+  import_tasks: custom_shortcuts.yml
+
+- name: add custom shortcuts
+  import_tasks: wm_keybindings.yml
+
+- name: night light
+  import_tasks: nightlight.yml
+

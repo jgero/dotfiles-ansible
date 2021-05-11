@@ -1,0 +1,7 @@
+- name: enable backup timer
+  systemd:
+    state: stopped
+    enabled: yes
+    scope: user
+    name: "{{ item }}"
+

@@ -1,0 +1,14 @@
+- name: ensure font user dir exists
+  file:
+    path="{{ home }}/.local/share/fonts"
+    state=directory
+
+- name: copy fonts to user fonts dir
+  copy:
+    src: "{{ item }}"
+    dest: "{{ home }}/.local/share/fonts/"
+  with_fileglob:
+    - "{{ dotfiles }}/roles/fonts/files/*"
+  notify:
+    - reload fonts
+

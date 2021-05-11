@@ -1,0 +1,5 @@
+- name: make file executable
+  file:
+    path: "{{ dotfiles }}/roles/util_scripts/files/{{ item }}"
+    mode: '0750'
+

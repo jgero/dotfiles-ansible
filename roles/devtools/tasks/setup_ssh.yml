@@ -1,0 +1,8 @@
+- name: ensure dir for key exists with correct permissions
+  file:
+    path: '{{ home }}/.ssh/{{ item }}'
+    state: directory
+    mode: '0700'
+  notify:
+    - generate ssh key
+

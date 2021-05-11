@@ -1,0 +1,15 @@
+- name: set up local workstation
+  hosts: local
+  roles:
+    - bash
+    - xdg_config
+    - devtools
+    - fonts
+    - backup
+    - util_scripts
+    - gnome
+  vars:
+    home: "{{ lookup('env', 'HOME') }}"
+    dotfiles: "{{ home }}/repos/dotfiles"
+    config: "{{ home }}/.config"
+

@@ -1,0 +1,31 @@
+- name: check the current rc file symlink
+  stat: path="{{ home }}/.bashrc"
+  register: bashrc_f
+- name: check the current rc dir symlink
+  stat: path="{{ home }}/.bashrc.d"
+  register: bashrc_d
+
+- name: remove .bashrc if it's there and is a regular file
+  file:
+    path="{{ home }}/.bashrc.d"
+    state=absent
+  when: bashrc_d.stat.isreg is defined and bashrc_d.stat.isreg
+- name: remove bashrc.d if it's there and is a dir
+  file:
+    path="{{ home }}/.bashrc.d"
+    state=absent
+  when: bashrc_d.stat.isdir is defined and bashrc_d.stat.isdir
+
+- name: link .bashrc file
+  file:
+    path="{{ home }}/.bashrc"
+    src="{{ dotfiles }}/roles/bash/files/bashrc"
+    state=link 
+    force=yes
+- name: link bashrc.d directory
+  file: 
+    path="{{ home }}/.bashrc.d"
+    src="{{ dotfiles }}/roles/bash/files/bashrc.d"
+    state=link 
+    force=yes
+
