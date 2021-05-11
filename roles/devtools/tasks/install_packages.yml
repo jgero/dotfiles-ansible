@@ -18,4 +18,11 @@
       - thunderbird
       - task
   become: true
+  
+- name: uninstall unwanted packages
+  dnf:
+    name:
+      - libreoffice*
+    state: absent
+  become: true
 

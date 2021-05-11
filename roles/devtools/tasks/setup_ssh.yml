@@ -3,6 +3,9 @@
     path: '{{ home }}/.ssh/{{ item }}'
     state: directory
     mode: '0700'
-  notify:
-    - generate ssh key
+  register: gen_dir
+
+- name: generate ssh key
+  command: "ssh-keygen -t ed25519 -N '' -f ~/.ssh/{{ item }}/id_ed25519"
+  when: gen_dir is changed
 
