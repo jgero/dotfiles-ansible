@@ -1,0 +1,9 @@
+- name: ensure dir for key exists with correct permissions
+  file:
+    path: '{{ home }}/.ssh/{{ item }}'
+    state: directory
+    mode: '0700'
+  
+- name: generate ssh key
+  command: "ssh-keygen -t ed25519 -N '' -f ~/.ssh/{{ item }}/id_ed25519"
+
