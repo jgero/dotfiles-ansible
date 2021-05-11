@@ -3,6 +3,7 @@
     name:
       - git
       - openssh
+      - gpg
       - g++
       - make
       - cmake

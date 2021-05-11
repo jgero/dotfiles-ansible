@@ -11,6 +11,23 @@ systemd services. The repo has to be cloned into your `$HOME/repos/dotfiles` dir
 In the future I want to add a script to automatically setup the complete OS, but currently this is
 just work in progress. (rpm-ostree, flatpaks, dnf, ...)
 
+## git
+
+I use different ssh keys for GitHub and Bitbucket, but since almost all my repos are on GitHub this
+key is the default. For the repos that need a different key use
+`git config --local core.sshCommand "ssh -i /path/to/private_key"` to change the local config.
+
+The GitHub fingerprint can be found
+[here](https://docs.github.com/en/github/authenticating-to-github/githubs-ssh-key-fingerprints).
+
+### sign commits
+
+Signing commits is not required and uses a password so I didn't include it in the playbook. But
+GiHub has very helpful articles on [how to generate a gpg key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-gpg-key)
+and [how to tell git to use the key](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key).
+`git config --global commit.gpgsign true` enables signing commits and
+`git config --global user.signingkey <key-id>` tells git what key id to use.
+
 ## restic backup
 
 To make it easy to manage different restic-repositories and to be able to push it to this github
