@@ -1,6 +1,7 @@
 [user]
     name = jgero
     email = 33359660+jgero@users.noreply.github.com
+	signingkey = 147FAB9C49EBA77B
 [pull]
     rebase = false
 [merge]
@@ -22,3 +23,5 @@
 [core]
     sshCommand = ssh -i ~/.ssh/github/id_ed25519
 
+[commit]
+	gpgsign = true
