@@ -1,5 +1,7 @@
 # ALIASES -------------------------------------------------------------------------------------
 
 # alias to nvim nightly
-alias vim="nvim.appimage"
+alias nvim="nvim.appimage"
+# automatically use nvim instead of vim
+alias vim="nvim"
 
