@@ -1,5 +1,8 @@
 # .bashrc
 
+# prompt
+PS1="[\e[31mT:$(task due.before:2day status:pending count)\e[0m \A \W]\$ "
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -39,4 +42,3 @@ unset rc
 
 ##################################### AUTO GENERATED SOMEHOW ######################################
 
-alias luamake=/home/jgero/.cache/nvim/nlua/sumneko_lua/lua-language-server/3rd/luamake/compile/luamake

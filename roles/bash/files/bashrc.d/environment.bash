@@ -1,9 +1,9 @@
-# PATH ----------------------------------------------------------------------------------------
+# PATH ---------------------------------------------------------------------------------------------
 
 # add custom scripts dir
 export PATH=$PATH:$HOME/repos/dotfiles/roles/util_scripts/files
 
-# OTHER ENVIRONMENT VARIABLES -----------------------------------------------------------------
+# OTHER ENVIRONMENT VARIABLES ----------------------------------------------------------------------
 
 # config home
 export XDG_CONFIG_HOME=$HOME/.config/
