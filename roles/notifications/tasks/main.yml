@@ -1,0 +1,21 @@
+- name: enable notification service
+  systemd:
+    state: stopped
+    enabled: yes
+    scope: user
+    name: "{{ dotfiles }}/roles/notifications/files/appointment_notifications.service"
+
+- name: enable notification timer
+  systemd:
+    state: stopped
+    enabled: yes
+    scope: user
+    name: "{{ dotfiles }}/roles/notifications/files/appointment_notifications.timer"
+
+- name: start notification timer
+  systemd:
+    state: started
+    scope: user
+    daemon_reload: yes
+    name: "appointment_notifications.timer"
+

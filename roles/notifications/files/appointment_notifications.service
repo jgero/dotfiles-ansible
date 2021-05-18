@@ -1,0 +1,7 @@
+[Unit]
+Description=Appointment notification service
+
+[Service]
+Type=oneshot
+ExecStart=/home/jgero/repos/dotfiles/roles/util_scripts/files/notifyAppointments
+
