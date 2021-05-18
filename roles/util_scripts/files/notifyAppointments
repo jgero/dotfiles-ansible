@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# tasks due today
+APPOINTMENT_COUNT_TODAY="$(task due.before:eod status:pending +appointment count)"
+# tasks due in the next hour
+APPOINTMENT_COUNT_NEXT_H="$(task due.before:1h status:pending +appointment count)"
+# tasks du in the next 15 mins
+APPOINTMENT_COUNT_NEXT_MINS="$(task due.before:15min status:pending +appointment count)"
+
+if (( $APPOINTMENT_COUNT_NEXT_MINS > 0 )); then
+    notify-send \
+        "appointment(s) in less than 15 min!" \
+        "$(task due.before:15min status:pending +appointment list rc.dateformat:'Y-M-D H:N')"
+elif (( $APPOINTMENT_COUNT_NEXT_H > 0 )); then
+    notify-send \
+        "appointment(s) in less than 1 hour!" \
+        "$(task due.before:1h status:pending +appointment list rc.dateformat:'Y-M-D H:N')"
+elif (( $APPOINTMENT_COUNT_TODAY > 0 )); then
+    notify-send \
+        "appointments(s) today!" \
+        "$(task due.before:eod status:pending +appointment list rc.dateformat:'Y-M-D H:N')"
+fi
+
