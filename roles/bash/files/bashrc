@@ -1,7 +1,10 @@
 # .bashrc
 
 # prompt
-PS1="[\e[31mT:$(task due.before:2day status:pending count)\e[0m \A \W]\$ "
+# only if task is installed (to avoid errors in toolbox)
+if command -v task &> /dev/null; then
+    PS1="[\e[31mT:$(task due.before:2day status:pending count)\e[0m \A \W]\$ "
+fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -9,12 +12,10 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-if ! [[ "$PATH" =~ "$HOME/Android/flutter/bin" ]]
-then
+if ! [[ "$PATH" =~ "$HOME/Android/flutter/bin" ]]; then
     PATH="$PATH:$HOME/Android/flutter/bin"
 fi
 export PATH
