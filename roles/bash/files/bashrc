@@ -3,7 +3,7 @@
 # prompt
 # only if task is installed (to avoid errors in toolbox)
 if command -v task &> /dev/null; then
-    PS1="[\e[31mT:$(task due.before:2day status:pending count)\e[0m \A \W]\$ "
+    PS1="[\\[\e[31m\\]T:$(task due.before:2day status:pending count)\\[\e[0m\\] \A \W]\$ "
 fi
 
 # Source global definitions
