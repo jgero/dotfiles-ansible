@@ -12,14 +12,22 @@ end
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/popup.nvim'}, { 'nvim-lua/plenary.nvim'} }
-    }
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
     use 'JoosepAlviste/nvim-ts-context-commentstring'
     use 'tpope/vim-repeat'
+
+    -- navigation
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'}, { 'nvim-lua/plenary.nvim'} }
+    }
+    use {
+        'ThePrimeagen/harpoon',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        }
+    }
 
     -- visuals
     use 'gruvbox-community/gruvbox'
@@ -47,7 +55,5 @@ return require('packer').startup(function()
     use 'hrsh7th/nvim-compe'
     use 'hrsh7th/vim-vsnip'
     use 'windwp/nvim-autopairs'
-    -- flutter
-    use {'akinsho/flutter-tools.nvim'}
 end)
 
