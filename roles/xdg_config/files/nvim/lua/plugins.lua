@@ -44,6 +44,8 @@ return require('packer').startup(function()
 
     -- general lsp
     use 'neovim/nvim-lspconfig'
+    -- use local version of lspcontainers for now until podman pr is merged
+    use '~/repos/lspcontainers.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use {
       'nvim-treesitter/completion-treesitter',

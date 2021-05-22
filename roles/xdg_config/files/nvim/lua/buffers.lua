@@ -7,5 +7,5 @@ utils.opt('o', 'splitbelow', true)
 utils.map('n', '<leader>+', ':resize +1<cr>')
 utils.map('n', '<leader>-', ':resize -1<cr>')
 
-utils.map('n', '<C-f>', '<silent> :lua require("harpoon.term").sendCommand(1, "selectProject\\n"); require("harpoon.term").gotoTerminal(1)<CR>')
+utils.map('n', '<C-f>', ':lua require("harpoon.term").sendCommand(1, "selectProject\\n"); require("harpoon.term").gotoTerminal(1)<CR>')
 
