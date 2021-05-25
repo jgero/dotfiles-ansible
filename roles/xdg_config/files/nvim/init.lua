@@ -11,7 +11,7 @@ local utils = require('utils')
 utils.opt('b', 'tabstop', 4)
 utils.opt('b', 'softtabstop', 4)
 utils.opt('b', 'shiftwidth', 4)
-utils.opt('b', 'expandtab', true)
+utils.opt('b', 'expandtab', false)
 utils.opt('b', 'autoindent', true)
 utils.opt('b', 'smartindent', true)
 
